@@ -13,11 +13,11 @@ export function ModeToggle() {
       {theme !== "dark" ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="none"
+          fill="currentColor"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-4 h-4">
+          className="w-6 h-6 text-yellow-400 drop-shadow-base">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -27,11 +27,11 @@ export function ModeToggle() {
       ) : (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="none"
+          fill="currentColor"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-4 h-4">
+          className="w-6 h-6 text-yellow-400 drop-shadow-base">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
