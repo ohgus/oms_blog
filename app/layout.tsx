@@ -1,7 +1,7 @@
 import Link from "next/link"
 import "./globals.css"
 import { Inter } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
+import { Providers } from "./providers";
 import { Analytics } from "@/components/analytics"
 import { ModeToggle } from "@/components/mode-toggle"
 
@@ -18,11 +18,11 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body
         className={`antialiased min-h-screen bg-white dark:bg-stone-900 text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <Providers>
           <div className="max-w-2xl mx-auto py-10 px-4">
             <header>
               <h1 className="mb-3 text-2xl font-bold">OhGus Blog</h1>
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <main>{children}</main>
           </div>
           <Analytics />
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   )
