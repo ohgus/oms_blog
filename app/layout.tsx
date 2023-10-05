@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import { Providers } from "./providers";
 import { Analytics } from "@/components/analytics"
 import { ModeToggle } from "@/components/mode-toggle"
+import CabinLogo from "@/components/cabinLogo"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -25,11 +26,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Providers>
           <div className="max-w-2xl mx-auto py-10 px-4">
             <header>
-              <h1 className="mb-3 text-2xl font-bold">OhGus Blog</h1>
+              <CabinLogo />
               <p className="mb-3">계속 미래를 그려나가는 개발자가 되자.</p>
               <div className="flex items-center justify-between">
                 <nav className="ml-0 mr-4 text-m font-medium space-x-6">
-                  <Link href="/">Home</Link>
                   <Link href="/about">About</Link>
                   <Link href="/portfolio">Portfolio</Link>
                 </nav>
