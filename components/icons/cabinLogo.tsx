@@ -3,7 +3,7 @@ export default function CabinLogo() {
         <a href="/">
             <svg 
                 width="200" 
-                height="70" 
+                height="50" 
                 viewBox="0 0 322 70" 
                 fill="currentColor" 
                 className="mb-5 text-black dark:text-white"
