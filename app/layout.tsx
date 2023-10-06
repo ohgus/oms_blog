@@ -4,7 +4,7 @@ import { Inter } from "next/font/google"
 import { Providers } from "./providers";
 import { Analytics } from "@/components/analytics"
 import { ModeToggle } from "@/components/mode-toggle"
-import CabinLogo from "@/components/cabinLogo"
+import CabinLogo from "@/components/icons/cabinLogo"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -20,7 +20,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ko">
-      <body
+      <body 
         className={`antialiased min-h-screen bg-white dark:bg-stone-900 text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
         <Providers>
