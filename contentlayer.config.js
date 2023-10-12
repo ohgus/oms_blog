@@ -7,10 +7,6 @@ const computedFields = {
     type: "string",
     resolve: (doc) => `/${doc._raw.flattenedPath}`,
   },
-  slugAsParams: {
-    type: "string",
-    resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
-  },
   url_path: {
     type: "string",
     resolve: (doc) => `/post/${getSlugWithoutCategoryPath(doc)}`,
