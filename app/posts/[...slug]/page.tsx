@@ -6,25 +6,20 @@ import { Mdx } from "@/components/mdx-components"
 
 interface PostProps {
   params: {
-    slug: string[]
+    slug: string;
   }
 }
 
 async function getPostFromParams(params: PostProps["params"]) {
-  const slug = params?.slug?.join("/")
-  const post = allPosts.find((post) => post.slugAsParams === slug)
+  const post = allPosts.find((post) => post.slug === params?.slug);
 
-  if (!post) {
-    null
-  }
-
-  return post
+  return !post ? null : post;
 }
 
 export async function generateMetadata({
   params,
 }: PostProps): Promise<Metadata> {
-  const post = await getPostFromParams(params)
+  const post = await getPostFromParams(params);
 
   if (!post) {
     return {}
@@ -38,12 +33,12 @@ export async function generateMetadata({
 
 export async function generateStaticParams(): Promise<PostProps["params"][]> {
   return allPosts.map((post) => ({
-    slug: post.slugAsParams.split("/"),
-  }))
+    slug: post.slug,
+  }));
 }
 
 export default async function PostPage({ params }: PostProps) {
-  const post = await getPostFromParams(params)
+  const post = await getPostFromParams(params);
 
   if (!post) {
     notFound()
