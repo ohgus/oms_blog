@@ -4,7 +4,7 @@ import Navbar from "../navbar";
 
 export default function Header() {
     return (
-        <header className="sticky top-0">
+        <header className="sticky px-2 py-3 z-20 bg-orange-50 dark:bg-stone-800 top-0">
             <div className="flex items-center justify-between">
               <CabinLogo />   
               <ModeToggle />
