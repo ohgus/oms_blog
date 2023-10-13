@@ -5,7 +5,7 @@ import { getSlugWithoutCategoryPath } from "./libs/mdx";
 const computedFields = {
   slug: {
     type: "string",
-    resolve: (doc) => `/${doc._raw.flattenedPath}`,
+    resolve: (doc) => getSlugWithoutCategoryPath(doc),
   },
   url_path: {
     type: "string",
