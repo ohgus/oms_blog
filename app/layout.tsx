@@ -19,7 +19,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ko">
       <body 
-        className={`mt-3 mx-auto max-w-3xl antialiased min-h-screen bg-orange-50 dark:bg-stone-800 text-slate-900 dark:text-slate-50 ${inter.className}`}
+        className={`mt-5 mx-auto max-w-3xl antialiased min-h-screen bg-orange-50 dark:bg-stone-800 text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
         <Providers>
             <Header />

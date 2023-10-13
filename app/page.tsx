@@ -1,17 +1,12 @@
 import { allPosts } from "@/.contentlayer/generated"
-import Link from "next/link"
+import PostCard from "@/components/post-card";
 
-export default function Home() {
+export default async function Home() {
   return (
-    <div className="prose dark:prose-invert">
+    <div>
       {allPosts.map((post) => (
-        <article key={post._id}>
-          <Link href={post.slug}>
-            <h3>{post.title}</h3>
-          </Link>
-          {post.description && <p className="font-semibold">{post.description}</p>}
-        </article>
+        <PostCard post={post} key={post._id} />
       ))}
     </div>
-  )
+  );
 }
