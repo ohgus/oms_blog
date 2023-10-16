@@ -6,7 +6,7 @@ import AboutLogo from "@/components/icons/aboutLogo";
 export default function Navbar() {
     return(
         <div className="flex items-center justify-start">
-            <nav className="flex items-center justify-between gap-x-5">
+            <nav className="flex items-center justify-between gap-x-5 ml-2">
                 <StudyLogo />
                 <AlgorithmLogo />
                 <PortfolioLogo />
