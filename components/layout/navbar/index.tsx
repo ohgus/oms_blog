@@ -1,12 +1,16 @@
-import Link from "next/link";
+import AlgorithmLogo from "@/components/icons/algorithmLogo";
+import PortfolioLogo from "@/components/icons/portfolioLogo";
+import StudyLogo from "@/components/icons/studyLogo";
+import AboutLogo from "@/components/icons/aboutLogo";
 
 export default function Navbar() {
     return(
-        <div className="flex items-center justify-between">
-            <nav className="ml-0 mr-4 text-lg font-medium space-x-6">
-                <Link className="font-semibold" href="/algorithm">Algorithm</Link>
-                <Link className="font-semibold" href="/portfolio">Portfolio</Link>
-                <Link className="font-bold" href="/about">About</Link>
+        <div className="flex items-center justify-start">
+            <nav className="flex items-center justify-between gap-x-5">
+                <StudyLogo />
+                <AlgorithmLogo />
+                <PortfolioLogo />
+                <AboutLogo />
             </nav>
         </div>
     )
