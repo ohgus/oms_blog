@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function StudyLogo() {
     return(
-        <Link href="/study">
+        <Link href="/category/study">
             <svg 
                 width="65" 
                 height="30" 

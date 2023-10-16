@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function AlgorithmLogo() {
     return (
-        <Link href="/algorithm">
+        <Link href="/category/algorithm">
             <svg 
                 width="110" 
                 height="30" 
