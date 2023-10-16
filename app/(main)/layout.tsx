@@ -1,5 +1,4 @@
-import { Analytics } from "@/components/analytics";
-import Header from "@/components/layout/header";
+import Navbar from "@/components/layout/navbar"
 
 type mainLayoutProps = {
     children: React.ReactNode;
@@ -7,10 +6,9 @@ type mainLayoutProps = {
 
 export default function MainLayout({ children }: mainLayoutProps) {
     return (
-        <>
-            <Header />
-                <main>{children}</main>
-            <Analytics />
-        </>
+        <div>
+            <Navbar />
+            {children}
+        </div>
     )
 }
