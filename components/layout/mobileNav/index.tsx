@@ -76,4 +76,5 @@ const MobileNav = memo(() => {
     )
 })
 
+MobileNav.displayName = "MobileNav";
 export default MobileNav;
