@@ -15,7 +15,7 @@ export const SiteConfig = {
             path: "/tags",
         },
         {
-            label: "about",
+            label: "About",
             path: "/about",
         },
     ],
