@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Post } from "../../.contentlayer/generated";
-import { DEFAULT_IMAGE_URL } from "@/src/constants";
-import { getBlurDataUrl, isLocalImageFileValid } from "@/src/libs/image-utils";
+import { Post } from "../.contentlayer/generated";
+import { DEFAULT_IMAGE_URL } from "@/constants";
+import { getBlurDataUrl, isLocalImageFileValid } from "@/libs/image-utils";
 
 type Props = {
     post: Post;

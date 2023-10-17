@@ -1,5 +1,5 @@
 import { allPosts } from "@/.contentlayer/generated"
-import PostCard from "@/src/components/post-card";
+import PostCard from "@/components/post-card";
 
 export default async function Home() {
   return (
