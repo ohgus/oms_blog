@@ -1,7 +1,7 @@
-import AlgorithmLogo from "@/components/icons/algorithmLogo";
-import PortfolioLogo from "@/components/icons/portfolioLogo";
-import StudyLogo from "@/components/icons/studyLogo";
-import AboutLogo from "@/components/icons/aboutLogo";
+import AlgorithmLogo from "@/src/components/icons/algorithmLogo";
+import PortfolioLogo from "@/src/components/icons/portfolioLogo";
+import StudyLogo from "@/src/components/icons/studyLogo";
+import AboutLogo from "@/src/components/icons/aboutLogo";
 
 export default function Navbar() {
     return(

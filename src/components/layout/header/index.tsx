@@ -1,5 +1,5 @@
-import CabinLogo from "@/components/icons/cabinLogo";
-import { ModeToggle } from "@/components/mode-toggle";
+import CabinLogo from "@/src/components/icons/cabinLogo";
+import { ModeToggle } from "@/src/components/mode-toggle";
 
 export default function Header() {
     return (

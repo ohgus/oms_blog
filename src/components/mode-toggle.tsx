@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-import useDarkMode from "@/libs/useDarkMode";
+import useDarkMode from "@/src/libs/useDarkMode";
 import IconButton from "./common/iconButton";
 import Moon from "./icons/moon";
 import Sun from "./icons/sun";

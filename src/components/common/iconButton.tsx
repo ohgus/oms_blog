@@ -1,4 +1,4 @@
-import { $ } from "@/libs/core";
+import { $ } from "@/src/libs/core";
 
 export default function IconButton({
     className,
