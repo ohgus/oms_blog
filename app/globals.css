@@ -2,8 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Arimo Hebrew Subset Italic 폰트 스타일 적용 */
+@layer base {
+  body {
+    font-style: italic;
+  }
+
+  /* 제목은 normal 스타일로 유지 */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-style: normal;
+  }
+
+  /* 코드 블록은 normal 스타일로 유지 */
+  code,
+  pre {
+    font-style: normal;
+  }
+}
+
 @supports (font: -apple-system-body) and (-webkit-appearance: none) {
-    img[loading="lazy"] {
-        clip-path: inset(0.6px);
-    }
+  img[loading='lazy'] {
+    clip-path: inset(0.6px);
+  }
 }

@@ -1,25 +1,26 @@
 import { ModeToggle } from '@/components/mode-toggle';
-import PostsLogo from '@/components/icons/postsLogo';
-import AboutLogo from '@/components/icons/aboutLogo';
 import ToHome from './ToHome';
 import MobileNav from '../mobileNav';
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <div className="flex flex-col justify-between">
-      <nav className="flex items-center justify-between py-10">
-        <ToHome />
-        <div className="flex items-center">
-          <div className="hidden sm:block">
-            <div className="flex items-center justify-between gap-y-1 mr-2">
-              <PostsLogo />
-              <AboutLogo />
-            </div>
+    <nav className="flex items-center justify-between w-full">
+      <ToHome />
+      <div className="flex items-center">
+        <div className="hidden sm:block">
+          <div className="flex items-center justify-between gap-x-6 mr-2">
+            <Link href="/pages/1">
+              <h2 className="font-semibold">Posts</h2>
+            </Link>
+            <Link href="/about">
+              <h2 className="font-bold">About</h2>
+            </Link>
           </div>
-          <ModeToggle />
-          <MobileNav />
         </div>
-      </nav>
-    </div>
+        <ModeToggle />
+        <MobileNav />
+      </div>
+    </nav>
   );
 }
