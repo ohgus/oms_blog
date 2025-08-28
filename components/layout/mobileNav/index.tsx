@@ -12,8 +12,11 @@ const MobileNav = memo(() => {
         setNavShow((status) => {
             if (status) {
                 document.body.style.overflow = "auto";
+                document.body.style.paddingRight = "0px";
             } else {
+                const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
                 document.body.style.overflow = "hidden";
+                document.body.style.paddingRight = `${scrollbarWidth}px`;
             }
             return !status;
         })
@@ -22,7 +25,7 @@ const MobileNav = memo(() => {
         <div className="sm:hidden">
             <button
                 type="button"
-                className="ml-1 mr-1 h-8 w-8 rounded"
+                className="flex items-center justify-center h-8 w-8 rounded"
                 aria-label="Toggle Menu"
                 onClick={onToggleNav}
             >
@@ -30,7 +33,7 @@ const MobileNav = memo(() => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="text-gray-900 dark:text-gray-100"
+                    className="text-[#F9F7F6] dark:text-[#F9F7F6]"
                 >
                     {navShow ? (
                         <path
@@ -48,7 +51,7 @@ const MobileNav = memo(() => {
                 </svg>
             </button>
             <div
-                className={`fixed top-38 right-0 z-10 h-full w-full transform bg-orange-50 opacity-95 duration-300 ease-in-out dark:bg-stone-700 ${
+                className={`fixed top-[80px] right-0 z-10 h-full w-full transform bg-[#F3F1F5] opacity-95 duration-300 ease-in-out dark:bg-[#161716] ${
                     navShow ? `translate-x-0` : `translate-x-full`
                 }`}
             >
@@ -58,12 +61,12 @@ const MobileNav = memo(() => {
                     className="fixed h-full w-full cursor-auto focus:outline-none"
                     onClick={onToggleNav}
                 />
-                <nav className="fixed mt-8 h-full">
+                <nav className="fixed w-full pt-8">
                     {SiteConfig.menu.map((link) => (
-                        <div key={link.path} className="px-12 py-4">
+                        <div key={link.path} className="px-8 py-6">
                             <Link
                                 href={link.path}
-                                className="text-2xl font-bold tracking-widest text-black dark:text-white"
+                                className="text-2xl font-bold tracking-widest text-[#252B52] dark:text-[#F9F7F6] block"
                                 onClick={onToggleNav}
                             >
                                 {link.label}
