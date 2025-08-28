@@ -27,7 +27,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <Providers>
           <Header />
-          <main className="mt-5 mx-auto max-w-3xl px-2">{children}</main>
+          <main className="mt-5 mx-auto max-w-4xl px-4">{children}</main>
         </Providers>
       </body>
     </html>
