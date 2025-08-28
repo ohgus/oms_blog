@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav className="flex items-center justify-between w-full">
       <ToHome />
-      <div className="flex items-center">
+      <div className="flex items-center space-x-2">
         <div className="hidden sm:block">
           <div className="flex items-center justify-between gap-x-6 mr-2">
             <Link href="/pages/1">
