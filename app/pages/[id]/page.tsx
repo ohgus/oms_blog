@@ -50,7 +50,7 @@ export default async function Page({ params }: { params: { id: string } }) {
             {/* Posts Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {currentPagePosts.map((post) => (
-                    <PostCard post={post} key={post._id} />
+                    <PostCard post={post} size="grid" key={post._id} />
                 ))}
             </div>
 
