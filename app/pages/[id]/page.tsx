@@ -25,10 +25,9 @@ export default async function Page({ params }: { params: { id: string } }) {
             new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
     );
 
-    // Skip the featured post (first post) for pagination
-    const remainingPosts = sortedPosts.slice(1);
+    // Use all posts for pagination (no featured post on pages)
     const postsPerPage = 10;
-    const totalPages = Math.ceil(remainingPosts.length / postsPerPage);
+    const totalPages = Math.ceil(sortedPosts.length / postsPerPage);
 
     if (isNaN(pageNo) || pageNo > totalPages || pageNo < 1) {
         return notFound();
@@ -36,7 +35,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 
     const startIndex = (pageNo - 1) * postsPerPage;
     const endIndex = startIndex + postsPerPage;
-    const currentPagePosts = remainingPosts.slice(startIndex, endIndex);
+    const currentPagePosts = sortedPosts.slice(startIndex, endIndex);
 
     return (
         <div className="space-y-8">
