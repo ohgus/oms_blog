@@ -25,6 +25,22 @@
   }
 }
 
+/* Tailwind Typography의 기본 코드 블록 스타일 오버라이드 */
+/* rehype-pretty-code가 생성한 코드 블록이 올바르게 보이도록 */
+.prose pre {
+  background-color: transparent;
+  border: none;
+  padding: 1rem;
+  overflow: visible;
+}
+
+.prose pre code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
 /* rehype-pretty-code 하이라이트 스타일 */
 
 .prose pre[data-line] {
