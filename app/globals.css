@@ -25,6 +25,60 @@
   }
 }
 
+/* Tailwind Typography의 기본 코드 블록 스타일 오버라이드 */
+/* rehype-pretty-code가 생성한 코드 블록이 올바르게 보이도록 */
+.prose pre {
+  background-color: transparent;
+  border: none;
+  padding: 1rem;
+  overflow: visible;
+}
+
+.prose pre code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+/* rehype-pretty-code 하이라이트 스타일 */
+
+.prose pre[data-line] {
+  padding: 1rem 0;
+}
+
+.prose [data-line-numbers] {
+  counter-reset: line;
+}
+
+.prose [data-line-numbers] > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1rem;
+  margin-right: 1rem;
+  text-align: right;
+  color: gray;
+}
+
+.prose [data-line] {
+  padding: 0 1rem;
+  display: block;
+  min-height: 1.5rem;
+}
+
+.prose [data-line].line--highlighted {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-left: 3px solid rgb(59, 130, 246);
+  padding-left: calc(1rem - 3px);
+}
+
+.prose [data-line].word--highlighted {
+  background-color: rgba(59, 130, 246, 0.2);
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.25rem;
+}
+
 @supports (font: -apple-system-body) and (-webkit-appearance: none) {
   img[loading='lazy'] {
     clip-path: inset(0.6px);

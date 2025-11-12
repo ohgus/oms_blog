@@ -347,13 +347,36 @@ function Component() {
 
 ### 핵심 변경사항
 
-```markdown
-| 항목           | Before             | After                  |
-| -------------- | ------------------ | ---------------------- |
-| handleToggle   | 매번 새로 생성     | useCallback으로 재사용 |
-| onToggle props | `() => toggle(id)` | `toggle` 직접 전달     |
-| id 전달 방식   | inline             | 별도 props (todoId)    |
-```
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>Before</th>
+      <th>After</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>handleToggle</td>
+      <td>매번 새로 생성</td>
+      <td>useCallback으로 재사용</td>
+    </tr>
+    <tr>
+      <td>onToggle props</td>
+      <td>
+        <code>() =&gt; toggle(id)</code>
+      </td>
+      <td>
+        <code>toggle</code> 직접 전달
+      </td>
+    </tr>
+    <tr>
+      <td>id 전달 방식</td>
+      <td>inline</td>
+      <td>별도 props (todoId)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 수정된 코드
 
@@ -451,12 +474,30 @@ const TodoItem = React.memo(({ todo, onToggle, todoId }) => {
 
 ### 성능 비교
 
-```markdown
-| 구분        | Before | After | 개선         |
-| ----------- | ------ | ----- | ------------ |
-| 렌더링 횟수 | 50개   | 1개   | 50배 감소    |
-| 렌더링 시간 | 15.3ms | 1.1ms | 14배 단축 ⚡ |
-```
+<table>
+  <thead>
+    <tr>
+      <th>구분</th>
+      <th>Before</th>
+      <th>After</th>
+      <th>개선</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>렌더링 횟수</td>
+      <td>50개</td>
+      <td>1개</td>
+      <td>50배 감소</td>
+    </tr>
+    <tr>
+      <td>렌더링 시간</td>
+      <td>15.3ms</td>
+      <td>1.1ms</td>
+      <td>14배 단축 ⚡</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 많은 사람이 우려하는 부분
 
